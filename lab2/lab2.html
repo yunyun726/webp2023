@@ -1,0 +1,30 @@
+<!doctype html>
+<script>
+    window.onload = function() {
+      document.getElementById('ShowBox'),innerHTML = 'fuck you'
+    }
+    </script>
+    <body>
+    <div id = "container" tabindex = "0" class = "blockquote text-nowrap">
+    </div>
+    </body>
+    
+    var container = document.getElementById('container');
+    window.addEventListener("keyup", function(e) {
+      console.log(e.key);
+      if(e.key) {
+        if(e.key == container.textContent.charAt(0)) {
+          container.textContent.substring(0);
+        }
+      }
+      add_new_chars();
+    });
+    
+      const upperChars = []
+      const lowerChars = []
+    function add_new_chars() {
+      const arr = upperChars.concat(lowerChars)
+      let randomChar = arr[Math.floor(Math.random() * 52)]
+      container.textContent +=  randomChar*3
+    }
+    
